@@ -7,13 +7,10 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-      <div>List it out</div>
+      <Home />
 
       <div>
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
           <li>
             <Link to="/login">Login</Link>
           </li>
@@ -22,9 +19,9 @@ function App() {
           </li>
         </ul>
         <Routes>
-          <Route path="/" component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={Signup} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
     </>
