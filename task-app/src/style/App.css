@@ -1,0 +1,45 @@
+nav {
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: right;
+}
+
+nav .login,
+.signup {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav .login:hover,
+.signup:hover {
+  background-color: #f05959;
+}
+
+.title,
+.slogan {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.title {
+  font-size: 200px;
+  margin-top: 300px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+.slogan {
+  margin-left: 70px;
+  font-size: 30px;
+}
