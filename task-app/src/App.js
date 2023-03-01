@@ -1,12 +1,14 @@
-import "./App.css";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import "./style/App.css";
+import { Routes, Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
+      <div>List it out</div>
+
       <div>
         <ul>
           <li>
@@ -19,11 +21,13 @@ function App() {
             <Link to="/signup">Signup</Link>
           </li>
         </ul>
-        <Route path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
+        <Routes>
+          <Route path="/" component={Home} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+        </Routes>
       </div>
-    </BrowserRouter>
+    </>
   );
 }
 
