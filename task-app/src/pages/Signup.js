@@ -6,11 +6,13 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
+  const apiUrl = "http://localhost:4000";
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { email, password, name };
 
-    fetch("http://localhost:4000/signup", {
+    fetch(`${apiUrl}/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

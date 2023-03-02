@@ -5,11 +5,13 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const apiUrl = "http://localhost:4000";
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { email, password };
 
-    fetch("http://localhost:4000/login", {
+    fetch(`${apiUrl}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -18,19 +20,17 @@ function Login() {
     })
       .then((res) => {
         if (!res) {
-          throw new Error("ERROR, will be more specific later");
+          throw new Error("password or email are incorrect");
         }
         return res.json();
       })
       .then((data) => {
-        console.log(data);
-        // do something with the response data, such as updating state
-        // setpassword
-      })
-      .catch((error) => {
-        console.error("There was a problem with the login request:", error);
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          // redirects user to dashboard page => need to create dashbaord page
+          window.location.href = "/dashboard";
+        }
       });
-    // once it has done that clear the fields
   };
 
   return (
