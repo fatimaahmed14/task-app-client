@@ -49,3 +49,20 @@ nav .login:hover,
 }
 
 /* stlye the login form + copy for the sign up */
+
+.loading {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #f86b6b;
+  animation: spin 1s infinite linear;
+  margin-top: 400px;
+  margin-left: 900px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

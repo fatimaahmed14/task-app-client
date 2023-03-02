@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../style/App.css";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -6,7 +7,7 @@ function Dashboard() {
 
   useEffect(() => {
     // need to create getUser route in server
-    // Retrieve the user's account information from the server using the stored token
+    // Retrieve the user's account information from the server using the stored token W/auth
     const token = localStorage.getItem("token");
     fetch(`${apiUrl}/user`, {
       headers: { Authorization: `Bearer ${token}` },
@@ -16,7 +17,7 @@ function Dashboard() {
   }, []);
 
   if (!user) {
-    return <div>Loading...</div>;
+    return <div className="loading"></div>;
   }
 
   return (
