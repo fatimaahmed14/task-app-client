@@ -1,3 +1,7 @@
+body {
+  /* background-image: linear-gradient(rgb(162, 211, 204), rgb(157, 179, 180)); */
+  /* background-color: #aaa798f3; */
+}
 nav {
   overflow: hidden;
 }
@@ -43,3 +47,5 @@ nav .login:hover,
   margin-left: 70px;
   font-size: 30px;
 }
+
+/* stlye the login form + copy for the sign up */

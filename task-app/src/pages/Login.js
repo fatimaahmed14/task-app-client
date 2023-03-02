@@ -25,10 +25,12 @@ function Login() {
       .then((data) => {
         console.log(data);
         // do something with the response data, such as updating state
+        // setpassword
       })
       .catch((error) => {
         console.error("There was a problem with the login request:", error);
       });
+    // once it has done that clear the fields
   };
 
   return (
