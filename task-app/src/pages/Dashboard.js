@@ -6,13 +6,12 @@ function Dashboard() {
   const apiUrl = "http://localhost:4000";
 
   useEffect(() => {
-    // need to create getUser route in server
-    // Retrieve the user's account information from the server using the stored token W/auth
     const token = localStorage.getItem("token");
     fetch(`${apiUrl}/user`, {
+      method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     })
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
 
@@ -23,6 +22,7 @@ function Dashboard() {
   return (
     <div>
       <h1>Welcome, {user.name}!</h1>
+      <div>add a task +</div>
     </div>
   );
 }
