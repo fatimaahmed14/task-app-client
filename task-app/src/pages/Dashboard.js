@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../style/App.css";
 
 function Dashboard() {
@@ -22,7 +23,10 @@ function Dashboard() {
   return (
     <div>
       <h1>Welcome, {user.name}!</h1>
-      <div>add a task +</div>
+      <Link to="/newTask">add a task +</Link>
+      <p>
+        <Link to="/">Sign Out</Link>
+      </p>
     </div>
   );
 }
