@@ -3,30 +3,6 @@ import { useSpring, animated } from "react-spring";
 import { Link } from "react-router-dom";
 import "../style/App.css";
 
-//   return (
-//     <div className="home">
-//       <animated.nav style={navProps}>
-//         <ul>
-//           <li className="login">
-//             <Link to="/login">Login</Link>
-//           </li>
-//           <li className="signup">
-//             <Link to="/signup">Signup</Link>
-//           </li>
-//         </ul>
-//       </animated.nav>
-//       <animated.main>
-//         <animated.h2 className="title" style={titleProps}>
-//           List it out.
-//         </animated.h2>
-//         <animated.h3 className="slogan" style={sloganProps}>
-//           let it all out... *DIGITALLY*
-//         </animated.h3>
-//       </animated.main>
-//     </div>
-//   );
-// }
-
 function Home() {
   const [isList, setIsList] = useState(true);
 
@@ -57,7 +33,7 @@ function Home() {
         <animated.h2 className="title" style={titleProps} onClick={toggleList}>
           {isList ? "List" : "Let"} it out.
         </animated.h2>
-        <h3 className="slogan">let it all out... *DIGITALLY*</h3>
+        <h3 className="slogan">^click me</h3>
       </main>
     </div>
   );
@@ -65,6 +41,7 @@ function Home() {
 
 export default Home;
 
+// styling for slide in title + buttons => may incoporate later
 //   const titleProps = useSpring({
 //     from: { opacity: 0, transform: "translateY(-50px)" },
 //     to: { opacity: 1, transform: "translateY(0px)" },
@@ -82,3 +59,24 @@ export default Home;
 //     to: { opacity: 1, transform: "translateY(0px)" },
 //     delay: 1500,
 //   });
+
+//     <div className="home">
+//       <animated.nav style={navProps}>
+//         <ul>
+//           <li className="login">
+//             <Link to="/login">Login</Link>
+//           </li>
+//           <li className="signup">
+//             <Link to="/signup">Signup</Link>
+//           </li>
+//         </ul>
+//       </animated.nav>
+//       <animated.main>
+//         <animated.h2 className="title" style={titleProps}>
+//           List it out.
+//         </animated.h2>
+//         <animated.h3 className="slogan" style={sloganProps}>
+//           let it all out... *DIGITALLY*
+//         </animated.h3>
+//       </animated.main>
+//     </div>

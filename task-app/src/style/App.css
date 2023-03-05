@@ -1,7 +1,7 @@
-body {
-  /* background-image: linear-gradient(rgb(162, 211, 204), rgb(157, 179, 180)); */
-  /* background-color: #aaa798f3; */
-}
+/* .body { */
+/* background-image: linear-gradient(rgb(162, 211, 204), rgb(157, 179, 180)); */
+/* background-color: #aaa798f3; */
+/* } */
 nav {
   overflow: hidden;
 }
@@ -27,7 +27,7 @@ nav .login,
 
 nav .login:hover,
 .signup:hover {
-  background-color: #f05959;
+  background-color: #837d7d;
 }
 
 .title,
