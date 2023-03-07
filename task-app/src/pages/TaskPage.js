@@ -1,10 +1,9 @@
 // Things to implement on this page:
 // useEffect to use GET/tasks to load all of the users tasks
-// DELETE task on ecah individual task
 // PATCH task on each task aswell
 
 import { useState, useEffect } from "react";
-// import "./style/App.css";
+import "../style/App.css";
 import { Link } from "react-router-dom";
 
 function TaskPage({ user }) {
@@ -13,7 +12,9 @@ function TaskPage({ user }) {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    fetch(`${apiUrl}/tasks`, {
+    const userId = 10;
+    // need to get user data in a dynamic way
+    fetch(`${apiUrl}/tasks/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     })
@@ -62,7 +63,7 @@ function TaskPage({ user }) {
           </div>
         ))}
       </div>
-      <Link to="/">Back to Dashboard</Link>
+      <Link to="/dashboard">Back to Dashboard</Link>
     </div>
   );
 }

@@ -66,3 +66,51 @@ nav .login:hover,
     transform: rotate(360deg);
   }
 }
+
+/* task page */
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.task {
+  border: 1px solid black;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task h3 {
+  margin-top: 0;
+}
+
+.task p {
+  margin: 5px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.delete-button {
+  background-color: #ff6961;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

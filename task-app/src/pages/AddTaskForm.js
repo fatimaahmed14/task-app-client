@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../style/App.css";
 
 function AddTaskForm() {
   const [title, setTitle] = useState("");
@@ -42,6 +44,11 @@ function AddTaskForm() {
 
   return (
     <>
+      <div>
+        <Link to="/tasks" {...user}>
+          all tasks
+        </Link>
+      </div>
       <form onSubmit={handleSubmit}>
         <label>
           Title:
