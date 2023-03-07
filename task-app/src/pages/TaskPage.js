@@ -1,25 +1,30 @@
-// Things to implement on this page:
-// useEffect to use GET/tasks to load all of the users tasks
-// PATCH task on each task aswell
-
 import { useState, useEffect } from "react";
 import "../style/App.css";
 import { Link } from "react-router-dom";
 
-function TaskPage({ user }) {
+function TaskPage() {
+  const [user, setUser] = useState(null);
   const [tasks, setTasks] = useState([]);
   const apiUrl = "http://localhost:4000";
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const userId = 10;
-    // need to get user data in a dynamic way
-    fetch(`${apiUrl}/tasks/${userId}`, {
+    fetch(`${apiUrl}/user`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
-      .then((data) => setTasks(data));
+      .then((data) => {
+        setUser(data);
+        if (data.id) {
+          fetch(`${apiUrl}/tasks/${data.id}`, {
+            method: "GET",
+            headers: { Authorization: `Bearer ${token}` },
+          })
+            .then((res) => res.json())
+            .then((data) => setTasks(data));
+        }
+      });
   }, []);
 
   const handleDelete = (id) => {
@@ -34,17 +39,14 @@ function TaskPage({ user }) {
   };
 
   const handleComplete = (id) => {
-    // const token = localStorage.getItem("token");
     fetch(`${apiUrl}/tasks/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
-        // Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({ status: "complete" }),
     })
       .then((res) => {
-        console.log("this is the response", res);
         if (!res) {
           throw new Error("Failed to update task");
         }
