@@ -23,17 +23,39 @@ function TaskPage({ user }) {
   }, []);
 
   const handleDelete = (id) => {
-    const token = localStorage.getItem("token");
+    // const token = localStorage.getItem("token");
     fetch(`${apiUrl}/tasks/${id}`, {
       method: "DELETE",
-      headers: { Authorization: `Bearer ${token}` },
+      // headers: { Authorization: `Bearer ${token}` },
     }).then(() => {
       const updatedTasks = tasks.filter((task) => task.id !== id);
       setTasks(updatedTasks);
     });
   };
 
-  const handleComplete = console.log("hey this works");
+  const handleComplete = (id) => {
+    // const token = localStorage.getItem("token");
+    fetch(`${apiUrl}/tasks/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        // Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ status: "complete" }),
+    })
+      .then((res) => {
+        if (!res) {
+          throw new Error("Failed to update task");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log("data", data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   return (
     <div className="task-container">
