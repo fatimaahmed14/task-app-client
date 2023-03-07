@@ -21,13 +21,15 @@ function Signup() {
     })
       .then((res) => {
         if (!res) {
-          throw new Error("ERROR, will be more specific later");
+          throw new Error("missing a required field");
         }
         return res.json();
       })
       .then((data) => {
         console.log(data);
-        // need to push into state
+
+        // window.location.replace("/dashboard");
+        // want this to redirect to dashboard once sign up is sucessful
       })
       .catch((error) => {
         console.error("There was a problem with the sign up request:", error);

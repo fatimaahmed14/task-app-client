@@ -3,6 +3,12 @@
 // DELETE task on ecah individual task
 // PATCH task on each task aswell
 
-function TaskPage() {}
+function TaskPage() {
+  return (
+    <>
+      <div>hey</div>
+    </>
+  );
+}
 
 export default TaskPage;

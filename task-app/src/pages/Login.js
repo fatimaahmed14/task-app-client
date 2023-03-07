@@ -19,7 +19,6 @@ function Login() {
       body: JSON.stringify(data),
     })
       .then((res) => {
-        console.log("heyheyheyeheyehyey");
         console.log("response", res);
         if (!res) {
           throw new Error("password or email are incorrect");
@@ -27,7 +26,6 @@ function Login() {
         return res.json();
       })
       .then((data) => {
-        console.log("le data", data);
         if (data.token) {
           localStorage.setItem("token", data.token);
           window.location.replace("/dashboard");

@@ -1,14 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function AddTaskForm() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [deadline, setDeadline] = useState("");
+  const [user, setUser] = useState(null);
+  const apiUrl = "http://localhost:4000";
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    fetch(`${apiUrl}/user`, {
+      method: "GET",
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then((res) => res.json())
+      .then((data) => setUser(data));
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("this is working!!");
-    // need to implement POST req here
+    const data = { title, description, deadline, userId: user.id };
+
+    fetch(`${apiUrl}/tasks`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        console.log("response", res);
+        if (!res) {
+          throw new Error("missing a field in the data");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log("data", data);
+      });
   };
 
   return (
