@@ -33,27 +33,40 @@ function Dashboard() {
     return <div className="loading"></div>;
   }
 
-  const incompleteTasks = tasks.filter((task) => task.status === "incomplete");
-  const completedTasks = tasks.filter((task) => task.status === "completed");
+  // const incompleteTasks = tasks.filter((task) => task.status === "incomplete");
+  // const completedTasks = tasks.filter((task) => task.status === "completed");
 
-  const data = [
-    {
-      title: "Incomplete Tasks",
-      value: incompleteTasks.length,
-      color: "#FF5733",
-    },
-    {
-      title: "Completed Tasks",
-      value: completedTasks.length,
-      color: "#3CB371",
-    },
-  ];
+  // const data = [
+  // {
+  //   title: "Incomplete Tasks",
+  //   value: incompleteTasks.length,
+  //   color: "#FF5733",
+  // },
+  // {
+  //   title: "Completed Tasks",
+  //   value: completedTasks.length,
+  //   color: "#3CB371",
+  // },
+  // ];
 
   return (
     <div>
       <h1>Welcome, {user.name}!</h1>
       <div className="progress-pie-chart">
-        <PieChart data={data} />
+        <PieChart
+          data={[
+            {
+              title: "Incomplete Tasks",
+              value: 7,
+              color: "#FF5733",
+            },
+            {
+              title: "Completed Tasks",
+              value: 3,
+              color: "#3CB371",
+            },
+          ]}
+        />
       </div>
       <Link to="/addTask">add a task +</Link>
       <div>

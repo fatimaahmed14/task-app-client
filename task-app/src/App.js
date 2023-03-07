@@ -15,7 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/newTask" element={<AddTaskForm />} />
+        <Route path="/addTask" element={<AddTaskForm />} />
         <Route path="/tasks" element={<TaskPage />} />
       </Routes>
     </>
