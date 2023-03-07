@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 function TaskPage({ user }) {
   const [tasks, setTasks] = useState([]);
+  const [complete, setComplete] = useState(false);
   const apiUrl = "http://localhost:4000";
 
   useEffect(() => {
@@ -35,7 +36,7 @@ function TaskPage({ user }) {
 
   const handleComplete = (id) => {
     // const token = localStorage.getItem("token");
-    fetch(`${apiUrl}/tasks/${id}`, {
+    fetch(`/tasks/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +51,8 @@ function TaskPage({ user }) {
         return res.json();
       })
       .then((data) => {
-        console.log("data", data);
+        console.log(data);
+        setComplete(true);
       })
       .catch((error) => {
         console.error(error);

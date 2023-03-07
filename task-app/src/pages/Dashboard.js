@@ -23,7 +23,7 @@ function Dashboard() {
   return (
     <div>
       <h1>Welcome, {user.name}!</h1>
-      <Link to={{ pathname: "/newTask", user: user.id }}>add a task +</Link>
+      <Link to="/newTask">add a task +</Link>
       <div>
         <Link to="/tasks">all tasks</Link>
       </div>
