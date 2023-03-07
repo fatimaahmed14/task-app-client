@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 
 function TaskPage({ user }) {
   const [tasks, setTasks] = useState([]);
-  const [complete, setComplete] = useState(false);
   const apiUrl = "http://localhost:4000";
 
   useEffect(() => {
@@ -36,7 +35,7 @@ function TaskPage({ user }) {
 
   const handleComplete = (id) => {
     // const token = localStorage.getItem("token");
-    fetch(`/tasks/${id}`, {
+    fetch(`${apiUrl}/tasks/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -45,6 +44,7 @@ function TaskPage({ user }) {
       body: JSON.stringify({ status: "complete" }),
     })
       .then((res) => {
+        console.log("this is the response", res);
         if (!res) {
           throw new Error("Failed to update task");
         }
@@ -52,7 +52,6 @@ function TaskPage({ user }) {
       })
       .then((data) => {
         console.log(data);
-        setComplete(true);
       })
       .catch((error) => {
         console.error(error);
