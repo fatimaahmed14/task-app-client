@@ -2,6 +2,7 @@
 /* background-image: linear-gradient(rgb(162, 211, 204), rgb(157, 179, 180)); */
 /* background-color: #aaa798f3; */
 /* } */
+
 nav {
   overflow: hidden;
 }
@@ -19,19 +20,27 @@ nav li {
 nav .login,
 .signup {
   display: block;
-  color: white;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  padding: 25px 25px;
+  border-radius: 5px;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+a:link {
+  text-decoration: none !important;
 }
 
 nav .login:hover,
 .signup:hover {
-  background-color: #837d7d;
+  background-color: #ec7c7c;
+  color: black;
 }
 
 .title,
-.slogan {
+.slogan,
+.login,
+.signup {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }

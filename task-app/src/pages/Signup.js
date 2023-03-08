@@ -38,9 +38,9 @@ function Signup() {
     <>
       <div>
         <h2>Signup</h2>
-        <p>
+        <div>
           <Link to="/">Home</Link>
-        </p>
+        </div>
       </div>
       <form onSubmit={handleSubmit}>
         <label>
