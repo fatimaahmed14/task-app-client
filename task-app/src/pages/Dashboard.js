@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { PieChart } from "react-minimal-pie-chart";
+// import { PieChart } from "react-minimal-pie-chart";
 // use react's library for pie charts
 import "../style/App.css";
 
@@ -52,8 +52,8 @@ function Dashboard() {
   return (
     <div>
       <h1>Welcome, {user.name}!</h1>
-      <div className="progress-pie-chart">
-        <PieChart
+      <div className="pie-chart">
+        {/* <PieChart
           data={[
             {
               title: "Incomplete Tasks",
@@ -66,7 +66,7 @@ function Dashboard() {
               color: "#3CB371",
             },
           ]}
-        />
+        /> */}
       </div>
       <Link to="/addTask">add a task +</Link>
       <div>
