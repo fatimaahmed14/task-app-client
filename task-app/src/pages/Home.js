@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSpring, animated } from "react-spring";
+import Confetti from "react-confetti";
 import { Link } from "react-router-dom";
 import "../style/App.css";
 
@@ -9,7 +10,6 @@ function Home() {
   const titleProps = useSpring({
     to: {
       opacity: 1,
-      transform: `translateY(${isList ? "0px" : "-50px"})`,
     },
   });
 
@@ -34,6 +34,18 @@ function Home() {
           {isList ? "List" : "Let"} it out.
         </animated.h2>
         <h3 className="slogan">^click me</h3>
+        {isList === false && (
+          <Confetti
+            // colors={["#FDB813"]}
+            recycle={false}
+            numberOfPieces={1500}
+            gravity={0.4}
+            initialVelocityX={10}
+            initialVelocityY={30}
+            width={window.innerWidth}
+            height={window.innerHeight}
+          />
+        )}
       </main>
     </div>
   );
@@ -76,7 +88,7 @@ export default Home;
 //           List it out.
 //         </animated.h2>
 //         <animated.h3 className="slogan" style={sloganProps}>
-//           let it all out... *DIGITALLY*
+//           click me^
 //         </animated.h3>
 //       </animated.main>
 //     </div>
