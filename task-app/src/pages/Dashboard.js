@@ -31,9 +31,12 @@ function Dashboard() {
   if (!user) {
     return <div className="loading"></div>;
   }
-
+  const completedTasks = tasks.filter((task) => task.status === "complete");
   const incompleteTasks = tasks.filter((task) => task.status === "incomplete");
-  const completedTasks = tasks.filter((task) => task.status === "completed");
+
+  console.log("complete tasks", completedTasks);
+
+  console.log("incomplete tasks", incompleteTasks);
 
   const data = [
     {
