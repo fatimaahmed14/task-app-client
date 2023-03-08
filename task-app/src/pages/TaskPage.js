@@ -25,7 +25,7 @@ function TaskPage() {
             .then((data) => setTasks(data));
         }
       });
-  }, []);
+  }, [tasks]);
 
   const handleDelete = (id) => {
     // const token = localStorage.getItem("token");
@@ -65,7 +65,10 @@ function TaskPage() {
       <h1>Task Page</h1>
       <div className="task-list">
         {tasks.map((task) => (
-          <div key={task.id} className="task">
+          <div
+            key={task.id}
+            className={`task ${task.status === "complete" ? "complete" : ""}`}
+          >
             <h3>{task.title}</h3>
             <p>{task.description}</p>
             <p>{task.deadline}</p>
@@ -76,7 +79,7 @@ function TaskPage() {
               >
                 Delete
               </button>
-              {!task.completed && (
+              {task.status !== "complete" && (
                 <button
                   className="complete-button"
                   onClick={() => handleComplete(task.id)}

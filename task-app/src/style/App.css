@@ -130,3 +130,7 @@ nav .login:hover,
   width: 400px;
   height: 400px;
 }
+
+.task.complete {
+  background-color: rgb(8, 228, 8);
+}
