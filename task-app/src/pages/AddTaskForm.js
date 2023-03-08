@@ -39,6 +39,9 @@ function AddTaskForm() {
       })
       .then((data) => {
         console.log("data", data);
+        setTitle("");
+        setDeadline("");
+        setDescription("");
       });
   };
 

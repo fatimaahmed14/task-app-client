@@ -25,17 +25,13 @@ function Signup() {
         }
         return res.json();
       })
-      .then((data) => {
-        console.log(data);
 
-        // window.location.replace("/dashboard");
-        // want this to redirect to dashboard once sign up is sucessful
-      })
-      .catch((error) => {
-        console.error("There was a problem with the sign up request:", error);
+      .then((data) => {
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          window.location.replace("/dashboard");
+        }
       });
-    // once it has done that clear the fields
-    // toast to say it is sucessful
   };
 
   return (
