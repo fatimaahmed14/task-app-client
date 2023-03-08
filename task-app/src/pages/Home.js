@@ -31,7 +31,7 @@ function Home() {
       </nav>
       <main>
         <animated.h2 className="title" style={titleProps} onClick={toggleList}>
-          {isList ? "List" : "Let"} it out.
+          {isList ? "List" : "Let"} it out {isList ? ":" : ":)"}
         </animated.h2>
         <h3 className="slogan">^click me</h3>
         {isList === false && (
