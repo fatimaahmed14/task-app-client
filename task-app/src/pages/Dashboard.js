@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { PieChart } from "react-minimal-pie-chart";
-// use react's library for pie charts
+import PieChart from "./PieChart";
 import "../style/App.css";
 
 function Dashboard() {
@@ -33,40 +32,27 @@ function Dashboard() {
     return <div className="loading"></div>;
   }
 
-  // const incompleteTasks = tasks.filter((task) => task.status === "incomplete");
-  // const completedTasks = tasks.filter((task) => task.status === "completed");
+  const incompleteTasks = tasks.filter((task) => task.status === "incomplete");
+  const completedTasks = tasks.filter((task) => task.status === "completed");
 
-  // const data = [
-  // {
-  //   title: "Incomplete Tasks",
-  //   value: incompleteTasks.length,
-  //   color: "#FF5733",
-  // },
-  // {
-  //   title: "Completed Tasks",
-  //   value: completedTasks.length,
-  //   color: "#3CB371",
-  // },
-  // ];
+  const data = [
+    {
+      title: "Incomplete Tasks",
+      value: incompleteTasks.length,
+      color: "#FF5733",
+    },
+    {
+      title: "Completed Tasks",
+      value: completedTasks.length,
+      color: "#3CB371",
+    },
+  ];
 
   return (
     <div>
       <h1>Welcome, {user.name}!</h1>
       <div className="pie-chart">
-        {/* <PieChart
-          data={[
-            {
-              title: "Incomplete Tasks",
-              value: 7,
-              color: "#FF5733",
-            },
-            {
-              title: "Completed Tasks",
-              value: 3,
-              color: "#3CB371",
-            },
-          ]}
-        /> */}
+        <PieChart data={data} />
       </div>
       <Link to="/addTask">add a task +</Link>
       <div>
