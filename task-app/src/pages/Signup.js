@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "../style/App.css";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -36,14 +37,12 @@ function Signup() {
 
   return (
     <>
-      <div>
-        <h2>Signup</h2>
-        <div>
-          <Link to="/">Home</Link>
-        </div>
+      <div className="signup-title">Signup</div>
+      <div className="home-button">
+        <Link to="/">Home</Link>
       </div>
-      <form onSubmit={handleSubmit}>
-        <label>
+      <form onSubmit={handleSubmit} className="signup-form">
+        <label className="name">
           Name:
           <input
             type="name"
@@ -51,7 +50,7 @@ function Signup() {
             onChange={(e) => setName(e.target.value)}
           />
         </label>
-        <label>
+        <label className="email">
           Email:
           <input
             type="email"
@@ -59,7 +58,7 @@ function Signup() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
-        <label>
+        <label className="password">
           Password:
           <input
             type="password"
@@ -67,7 +66,9 @@ function Signup() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <button type="submit">Sign up</button>
+        <button type="submit" className="submit">
+          Sign up
+        </button>
       </form>
     </>
   );

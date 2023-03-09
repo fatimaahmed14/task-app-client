@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "../style/App.css";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -35,12 +36,10 @@ function Login() {
 
   return (
     <>
-      <div>
-        <p>
-          <Link to="/">Home</Link>
-        </p>
-        ;
+      <div className="home-button">
+        <Link to="/">Home</Link>
       </div>
+      <div className="login-title">Login</div>
       <form onSubmit={handleSubmit}>
         <label>
           Email:

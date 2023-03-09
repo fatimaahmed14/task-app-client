@@ -40,7 +40,9 @@ nav .login:hover,
 .title,
 .slogan,
 .login,
-.signup {
+.signup,
+.signup-title,
+.login-title {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -142,4 +144,72 @@ nav .login:hover,
 
 .task.complete {
   background-color: rgb(8, 228, 8);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+}
+
+.signup-title,
+.login-title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 100px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+}
+
+.signup-title h2 {
+  font-size: 100px;
+}
+
+.home-button {
+  float: right;
+  margin-right: 30px;
+  border-radius: 10px;
+  background-color: #ec7c7c;
+  width: 100px;
+  height: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input[type="name"],
+input[type="email"],
+input[type="password"] {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: #ccc;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
 }
