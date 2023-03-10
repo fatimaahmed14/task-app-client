@@ -34,10 +34,6 @@ function Dashboard() {
   const completedTasks = tasks.filter((task) => task.status === "complete");
   const incompleteTasks = tasks.filter((task) => task.status === "incomplete");
 
-  console.log("complete tasks", completedTasks);
-
-  console.log("incomplete tasks", incompleteTasks);
-
   const data = [
     {
       title: "Incomplete Tasks",

@@ -37,7 +37,8 @@ a {
 nav .login:hover,
 .signup:hover,
 .sign-out-button:hover,
-.home-button:hover {
+.home-button:hover,
+.add-task-button:hover {
   background-color: #32cd32;
   color: black;
 }
@@ -243,7 +244,7 @@ button[type="submit"]:hover {
 }
 
 .welcome {
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 h1 {
@@ -278,6 +279,18 @@ h1 {
   font-weight: bold;
 }
 
+.all-tasks {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  border: solid 2px;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #83d686;
+  color: black;
+  font-weight: bold;
+}
 Link {
   background-color: #4caf50;
   color: white;
@@ -289,4 +302,10 @@ Link {
 
 Link:hover {
   background-color: #3e8e41;
+}
+
+.add-task-button {
+  width: 400px;
+  height: 50px;
+  font-size: 40px;
 }

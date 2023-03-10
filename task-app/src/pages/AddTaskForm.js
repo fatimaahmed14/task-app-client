@@ -48,7 +48,7 @@ function AddTaskForm() {
   return (
     <>
       <nav>
-        <div className="sign-out-button-2">
+        <div className="sign-out-button">
           <Link to="/">Sign Out</Link>
         </div>
       </nav>
@@ -79,7 +79,7 @@ function AddTaskForm() {
         </label>
         <button type="submit">add task</button>
       </form>
-      <div className="all-tasks-2">
+      <div className="all-tasks">
         <Link to="/tasks" {...user}>
           all tasks
         </Link>
