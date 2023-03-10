@@ -20,7 +20,7 @@ nav .login,
 .signup {
   display: block;
   text-align: center;
-  padding: 20px 20px;
+  padding: 10px 20px;
   border-radius: 15px;
   font-size: x-large;
   font-weight: bolder;
@@ -80,6 +80,7 @@ nav .login:hover,
 .slogan {
   margin-left: 70px;
   font-size: 40px;
+  color: #32cd32;
 }
 
 /* stlye the login form + copy for the sign up */
@@ -189,7 +190,6 @@ nav .login:hover,
   margin-top: 50px;
   font-size: 100px;
   margin-bottom: 30px;
-  margin-left: 100px;
 }
 
 .add-task-form {
@@ -220,7 +220,7 @@ input[type="deadline"] {
   padding-bottom: 15px;
   border-radius: 15px;
   color: rgb(255, 251, 251);
-  background-color: #4caf50;
+  background-color: #35a339;
   width: 90px;
   height: 30px;
   font-size: 25px;
@@ -316,10 +316,13 @@ h1 {
   top: 0;
   right: 0;
   margin: 10px;
-  border-radius: 3px;
   padding: 10px;
   background-color: #83d686;
   font-weight: bold;
+}
+
+.sign-out-button {
+  border-radius: 3px;
 }
 
 .all-tasks,
