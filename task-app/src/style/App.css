@@ -55,7 +55,8 @@ nav .login:hover,
 .sign-out-button,
 .task-page-title,
 .dashboard-button,
-.home-button {
+.home-button,
+.add-task-button-2 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -248,7 +249,7 @@ button[type="submit"]:hover {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 50px;
   margin: 0;
 }
 
@@ -279,10 +280,11 @@ h1 {
   font-weight: bold;
 }
 
-.all-tasks {
+.all-tasks,
+.dashboard-button,
+.add-task-button-2 {
   position: absolute;
   bottom: 0;
-  left: 0;
   margin: 10px;
   border: solid 2px;
   border-radius: 3px;
@@ -290,6 +292,14 @@ h1 {
   background-color: #83d686;
   color: black;
   font-weight: bold;
+}
+
+.all-tasks {
+  left: 0;
+}
+
+.add-task-button-2 {
+  left: 0;
 }
 Link {
   background-color: #4caf50;
