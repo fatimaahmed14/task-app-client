@@ -6,13 +6,19 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const [error, setError] = useState(null);
 
   const apiUrl = "http://localhost:4000";
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (password.length < 8) {
+      setError(
+        "Password must be at least 8 characters long including uppercase and lowercase letters, numbers, and symbols"
+      );
+      return;
+    }
     const data = { email, password, name };
-
     fetch(`${apiUrl}/signup`, {
       method: "POST",
       headers: {
@@ -21,17 +27,19 @@ function Signup() {
       body: JSON.stringify(data),
     })
       .then((res) => {
-        if (!res) {
-          throw new Error("missing a required field");
+        if (!res.ok) {
+          throw new Error("An error occurred while signing up.");
         }
         return res.json();
       })
-
       .then((data) => {
         if (data.token) {
           localStorage.setItem("token", data.token);
           window.location.replace("/dashboard");
         }
+      })
+      .catch((error) => {
+        setError(error.message);
       });
   };
 
@@ -66,6 +74,7 @@ function Signup() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
+        {error && <div className="error">{error}</div>}
         <button type="submit" className="submit">
           Sign up
         </button>
