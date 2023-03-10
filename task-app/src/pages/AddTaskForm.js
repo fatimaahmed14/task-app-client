@@ -52,7 +52,7 @@ function AddTaskForm() {
           <Link to="/">Sign Out</Link>
         </div>
       </nav>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="add-task-form">
         <label>
           Title:
           <input
