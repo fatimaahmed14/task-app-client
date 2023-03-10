@@ -42,7 +42,7 @@ nav .login:hover,
 }
 
 .add-task-button:hover {
-  background-color: #3cb371;
+  background-color: #83d686;
 }
 
 .title,
@@ -64,7 +64,8 @@ nav .login:hover,
 .add-task-form,
 .delete-button,
 .complete-button,
-.error {
+.error,
+.watermark {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -161,17 +162,16 @@ nav .login:hover,
   font-weight: bolder;
 }
 
+.task.complete {
+  background-color: rgba(35, 209, 35, 0.342);
+}
+
 /* pie charts */
 
 .pie-chart {
   position: relative;
   width: 400px;
   height: 400px;
-}
-
-/* task page  */
-.task.complete {
-  background-color: rgba(35, 209, 35, 0.342);
 }
 
 /* form  */
@@ -274,6 +274,15 @@ button[type="submit"]:hover {
   /* height: 100vh; */
   margin: 0;
   padding: 0;
+}
+.watermark {
+  left: 0;
+  position: absolute;
+  top: 0;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .welcome {
