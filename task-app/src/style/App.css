@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(241, 236, 226);
+}
+
 nav {
   overflow: hidden;
 }
@@ -32,10 +36,13 @@ a {
 nav .login:hover,
 .signup:hover,
 .sign-out-button:hover,
-.home-button:hover,
-.add-task-button:hover {
+.home-button:hover {
   background-color: #32cd32;
   color: black;
+}
+
+.add-task-button:hover {
+  background-color: #3cb371;
 }
 
 .title,
@@ -143,7 +150,7 @@ nav .login:hover,
 }
 
 .complete-button {
-  background-color: #7bff61;
+  background-color: #83d686;
   color: black;
   border: none;
   border-radius: 5px;
@@ -286,8 +293,11 @@ h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.add-task-button {
   border: solid 2px;
-  border-radius: 3px;
 }
 
 .sign-out-button {
@@ -295,11 +305,9 @@ h1 {
   top: 0;
   right: 0;
   margin: 10px;
-  border: solid 2px;
   border-radius: 3px;
   padding: 10px;
   background-color: #83d686;
-  color: black;
   font-weight: bold;
 }
 
@@ -309,11 +317,9 @@ h1 {
   position: absolute;
   bottom: 0;
   margin: 10px;
-  border: solid 2px;
   border-radius: 3px;
   padding: 10px;
   background-color: #83d686;
-  color: black;
   font-weight: bold;
 }
 
