@@ -36,7 +36,7 @@ function Home() {
         <h3 className="slogan">click me ^</h3>
         {isList === false && (
           <Confetti
-            colors={["#50C878"]}
+            colors={["#32CD32"]}
             recycle={false}
             numberOfPieces={1500}
             gravity={0.4}

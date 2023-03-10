@@ -21,20 +21,24 @@ nav .login,
 .signup {
   display: block;
   text-align: center;
-  padding: 25px 25px;
-  border-radius: 5px;
+  padding: 20px 20px;
+  border-radius: 15px;
   font-size: x-large;
   font-weight: bolder;
 }
 
 a:link {
   text-decoration: none !important;
+}
+a {
   color: black;
 }
 
 nav .login:hover,
-.signup:hover {
-  background-color: #ec7c7c;
+.signup:hover,
+.sign-out-button:hover,
+.home-button:hover {
+  background-color: #32cd32;
   color: black;
 }
 
@@ -128,7 +132,7 @@ nav .login:hover,
 }
 
 .delete-button {
-  background-color: #ff6961;
+  background-color: #d12d25;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -181,9 +185,9 @@ nav .login:hover,
   margin-right: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-radius: 10px;
-  color: black;
-  background-color: #ec7c7c;
+  border-radius: 15px;
+  color: rgb(255, 251, 251);
+  background-color: #4caf50;
   width: 90px;
   height: 30px;
   font-size: 25px;
@@ -253,13 +257,25 @@ h1 {
 
 .add-task-button,
 .all-tasks,
-.sign-out-button,
 .dashboard-button {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
   border: solid 2px;
   border-radius: 3px;
+}
+
+.sign-out-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  border: solid 2px;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #83d686;
+  color: black;
+  font-weight: bold;
 }
 
 Link {
