@@ -12,13 +12,8 @@ function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password.length < 8) {
-      setError(
-        "Password must be at least 8 characters long including uppercase and lowercase letters, numbers, and symbols"
-      );
-      return;
-    }
     const data = { email, password, name };
+
     fetch(`${apiUrl}/signup`, {
       method: "POST",
       headers: {
@@ -39,7 +34,7 @@ function Signup() {
         }
       })
       .catch((error) => {
-        setError(error.message);
+        setError("this email in already is use");
       });
   };
 
