@@ -215,7 +215,6 @@ input[type="deadline"] {
 }
 
 .home-button {
-  float: right;
   margin-right: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -271,7 +270,6 @@ button[type="submit"]:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* height: 100vh; */
   margin: 0;
   padding: 0;
 }
@@ -312,7 +310,8 @@ h1 {
   border: solid 2px;
 }
 
-.sign-out-button {
+.sign-out-button,
+.home-button {
   position: absolute;
   top: 0;
   right: 0;
