@@ -36,7 +36,8 @@ a {
 nav .login:hover,
 .signup:hover,
 .sign-out-button:hover,
-.home-button:hover {
+.home-button:hover,
+.submit:hover {
   background-color: #32cd32;
   color: black;
 }
@@ -260,12 +261,14 @@ input[type="password"] {
 
 button[type="submit"] {
   background-color: white;
-  color: #3e8e41;
+  color: black;
+  background-color: #9ec29f;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   margin-top: 10px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 button[type="submit"]:hover {
@@ -286,7 +289,7 @@ button[type="submit"]:hover {
   top: 0;
   padding: 10px;
   margin: 10px;
-  font-size: 20px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -318,6 +321,7 @@ h1 {
 
 .add-task-button {
   border: solid 2px;
+  background-color: lightgrey;
 }
 
 .sign-out-button,
@@ -332,7 +336,7 @@ h1 {
 }
 
 .sign-out-button {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .all-tasks,
@@ -342,7 +346,7 @@ h1 {
   position: absolute;
   bottom: 0;
   margin: 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 10px;
   background-color: #83d686;
   font-weight: bold;
@@ -362,7 +366,7 @@ h1 {
   position: absolute;
   bottom: 0;
   margin: 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 10px;
   background-color: #83d686;
   font-weight: bold;
