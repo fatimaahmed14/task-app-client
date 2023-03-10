@@ -68,16 +68,16 @@ function TaskPage() {
           <Link to="/">Sign Out</Link>
         </div>
       </nav>
-      <h1 className="task-page-title">My tasks :</h1>
+      <h1 className="task-page-title">My Tasks</h1>
       <div className="task-list">
         {tasks.map((task) => (
           <div
             key={task.id}
             className={`task ${task.status === "complete" ? "complete" : ""}`}
           >
-            <h3>{task.title}</h3>
-            <p>{task.description}</p>
-            <p>{task.deadline}</p>
+            <h3 className="task-title-box">{task.title}</h3>
+            <p className="task-description-box">{task.description}</p>
+            <p className="task-deadline-box">{task.deadline}</p>
             <div className="button-group">
               <button
                 className="delete-button"

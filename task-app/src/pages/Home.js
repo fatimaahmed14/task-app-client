@@ -33,7 +33,7 @@ function Home() {
         <animated.h2 className="title" style={titleProps} onClick={toggleList}>
           {isList ? "List" : "Let"} it out {isList ? ":" : ":)"}
         </animated.h2>
-        <h3 className="slogan">click me ^</h3>
+        <h3 className="slogan">click above^</h3>
         {isList === false && (
           <Confetti
             colors={["#32CD32"]}

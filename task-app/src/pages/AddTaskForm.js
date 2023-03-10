@@ -7,6 +7,7 @@ function AddTaskForm() {
   const [description, setDescription] = useState("");
   const [deadline, setDeadline] = useState("");
   const [user, setUser] = useState(null);
+  const [success, setSuccess] = useState("");
   const apiUrl = "http://localhost:4000";
 
   useEffect(() => {
@@ -42,6 +43,8 @@ function AddTaskForm() {
         setTitle("");
         setDeadline("");
         setDescription("");
+        setSuccess("Task has been added");
+        setTimeout(() => setSuccess(""), 2000);
       });
   };
 
@@ -80,7 +83,8 @@ function AddTaskForm() {
         </label>
         <button type="submit">add task</button>
       </form>
-      <div className="all-tasks">
+      {success && <div className="success">{success}</div>}
+      <div className="all-tasks-2">
         <Link to="/tasks" {...user}>
           all tasks
         </Link>

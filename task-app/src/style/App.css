@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(241, 236, 226);
+  background-color: white;
 }
 
 nav {
@@ -65,7 +65,9 @@ nav .login:hover,
 .delete-button,
 .complete-button,
 .error,
-.watermark {
+.watermark,
+.success,
+.all-tasks-2 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -80,7 +82,7 @@ nav .login:hover,
 .slogan {
   margin-left: 70px;
   font-size: 40px;
-  color: #32cd32;
+  color: green;
 }
 
 /* stlye the login form + copy for the sign up */
@@ -118,7 +120,7 @@ nav .login:hover,
 }
 
 .task {
-  border: 1px solid black;
+  /* border: 1px solid green; */
   width: 300px;
   margin: 10px;
   padding: 10px;
@@ -126,6 +128,7 @@ nav .login:hover,
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
+  background-color: lightgray;
 }
 
 .task h3 {
@@ -155,7 +158,7 @@ nav .login:hover,
 
 .complete-button {
   background-color: #83d686;
-  color: black;
+  color: white;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
@@ -181,7 +184,6 @@ nav .login:hover,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* height: 100vh; */
 }
 
 .signup-title,
@@ -194,10 +196,15 @@ nav .login:hover,
 
 .add-task-form {
   text-align: center;
-  margin-top: 50px;
-  font-size: 40px;
+  margin-top: 200px;
+  font-size: 30px;
   margin-bottom: 30px;
-  margin-left: 100px;
+  margin-left: 600px;
+  margin-right: 600px;
+  border: solid 2px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #83d686;
 }
 
 input[type="description"] {
@@ -208,6 +215,7 @@ input[type="title"],
 input[type="description"],
 input[type="deadline"] {
   font-size: 20px;
+  width: 500px;
 }
 
 .signup-title h2 {
@@ -219,8 +227,7 @@ input[type="deadline"] {
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 15px;
-  color: rgb(255, 251, 251);
-  background-color: #35a339;
+  color: black;
   width: 90px;
   height: 30px;
   font-size: 25px;
@@ -252,8 +259,8 @@ input[type="password"] {
 }
 
 button[type="submit"] {
-  background-color: #4caf50;
-  color: white;
+  background-color: white;
+  color: #3e8e41;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -262,7 +269,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #9ec29f;
 }
 
 .dashboard-page {
@@ -289,8 +296,11 @@ button[type="submit"]:hover {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 100px;
   margin: 0;
+}
+.task-list {
+  margin-top: 50px;
 }
 
 .pie-chart {
@@ -317,7 +327,7 @@ h1 {
   right: 0;
   margin: 10px;
   padding: 10px;
-  background-color: #83d686;
+  color: black;
   font-weight: bold;
 }
 
@@ -338,15 +348,30 @@ h1 {
   font-weight: bold;
 }
 
+.add-task-button-2,
 .all-tasks {
-  left: 0;
+  margin-bottom: 70px;
 }
 
-.add-task-button-2 {
-  left: 0;
+.all-tasks {
+  margin-left: 10px;
+}
+
+.all-tasks-2 {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #83d686;
+  font-weight: bold;
+  margin-bottom: 70px;
+  justify-content: center;
+  margin-left: 895px;
 }
 .dashboard-button-2 {
-  margin-left: 915px;
+  margin-left: 855px;
 }
 Link {
   background-color: #4caf50;
@@ -362,7 +387,7 @@ Link:hover {
 }
 
 .add-task-button {
-  width: 400px;
+  width: 300px;
   height: 50px;
   font-size: 40px;
 }
@@ -373,5 +398,15 @@ Link:hover {
   padding-top: 5px;
   background-color: #c53d3679;
   border-radius: 10px;
-  text-align: center; /* added property */
+  text-align: center;
+}
+
+.success {
+  width: 150px;
+  height: 20px;
+  margin-left: 860px;
+  background-color: #9ec29f;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
 }
