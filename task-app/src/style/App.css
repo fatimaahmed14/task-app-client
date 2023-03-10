@@ -60,6 +60,7 @@ nav .login:hover,
 .dashboard-button,
 .home-button,
 .add-task-button-2,
+.dashboard-button-2,
 .add-task-form,
 .delete-button,
 .complete-button,
@@ -270,12 +271,13 @@ button[type="submit"]:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0;
   padding: 0;
 }
 
 .welcome {
+  margin-top: 80px;
   margin-bottom: 100px;
 }
 
@@ -314,6 +316,7 @@ h1 {
 
 .all-tasks,
 .dashboard-button,
+.dashboard-button-2,
 .add-task-button-2 {
   position: absolute;
   bottom: 0;
@@ -330,6 +333,9 @@ h1 {
 
 .add-task-button-2 {
   left: 0;
+}
+.dashboard-button-2 {
+  margin-left: 915px;
 }
 Link {
   background-color: #4caf50;

@@ -84,6 +84,9 @@ function AddTaskForm() {
           all tasks
         </Link>
       </div>
+      <div className="dashboard-button-2">
+        <Link to="/dashboard">Back to Dashboard</Link>
+      </div>
     </>
   );
 }
