@@ -62,7 +62,12 @@ function TaskPage() {
 
   return (
     <div className="task-container">
-      <h1>Task Page</h1>
+      <nav>
+        <div className="sign-out-button">
+          <Link to="/">Sign Out</Link>
+        </div>
+      </nav>
+      <h1 className="task-page-title">Task Page</h1>
       <div className="task-list">
         {tasks.map((task) => (
           <div
@@ -91,7 +96,12 @@ function TaskPage() {
           </div>
         ))}
       </div>
-      <Link to="/dashboard">Back to Dashboard</Link>
+      <div className="dashboard-button">
+        <Link to="/dashboard">Back to Dashboard</Link>
+      </div>
+      <div className="all-tasks">
+        <Link to="/tasks">all tasks</Link>
+      </div>
     </div>
   );
 }

@@ -52,18 +52,24 @@ function Dashboard() {
   ];
 
   return (
-    <div>
-      <h1>Welcome, {user.name}!</h1>
+    <div className="dashboard-page">
+      <nav>
+        <div className="sign-out-button">
+          <Link to="/">Sign Out</Link>
+        </div>
+      </nav>
+      <div className="welcome">
+        <h1>Welcome, {user.name}!</h1>
+      </div>
       <div className="pie-chart">
         <PieChart data={data} />
       </div>
-      <Link to="/addTask">add a task +</Link>
-      <div>
+      <div className="add-task-button">
+        <Link to="/addTask">add a task +</Link>
+      </div>
+      <div className="all-tasks">
         <Link to="/tasks">all tasks</Link>
       </div>
-      <p>
-        <Link to="/">Sign Out</Link>
-      </p>
     </div>
   );
 }

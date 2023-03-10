@@ -37,10 +37,10 @@ function Signup() {
 
   return (
     <>
-      <div className="signup-title">Signup</div>
       <div className="home-button">
         <Link to="/">Home</Link>
       </div>
+      <div className="signup-title">Signup</div>
       <form onSubmit={handleSubmit} className="signup-form">
         <label className="name">
           Name:

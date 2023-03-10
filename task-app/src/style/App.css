@@ -29,6 +29,7 @@ nav .login,
 
 a:link {
   text-decoration: none !important;
+  color: black;
 }
 
 nav .login:hover,
@@ -42,7 +43,14 @@ nav .login:hover,
 .login,
 .signup,
 .signup-title,
-.login-title {
+.login-title,
+.welcome,
+.add-task-button,
+.all-tasks,
+.sign-out-button,
+.task-page-title,
+.dashboard-button,
+.home-button {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -56,7 +64,7 @@ nav .login:hover,
 
 .slogan {
   margin-left: 70px;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 /* stlye the login form + copy for the sign up */
@@ -101,6 +109,7 @@ nav .login:hover,
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
 }
 
 .task h3 {
@@ -143,7 +152,7 @@ nav .login:hover,
 }
 
 .task.complete {
-  background-color: rgb(8, 228, 8);
+  background-color: rgba(35, 209, 35, 0.521);
 }
 
 .signup-form {
@@ -170,10 +179,15 @@ nav .login:hover,
 .home-button {
   float: right;
   margin-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-radius: 10px;
+  color: black;
   background-color: #ec7c7c;
-  width: 100px;
+  width: 90px;
   height: 30px;
+  font-size: 25px;
+  text-align: center; /* added property */
 }
 
 form {
@@ -211,5 +225,52 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.pie-chart {
+  margin-bottom: 30px;
+}
+
+.add-task-button,
+.all-tasks,
+.sign-out-button,
+.dashboard-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: solid 2px;
+  border-radius: 3px;
+}
+
+Link {
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+Link:hover {
   background-color: #3e8e41;
 }

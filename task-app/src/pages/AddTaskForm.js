@@ -47,11 +47,11 @@ function AddTaskForm() {
 
   return (
     <>
-      <div>
-        <Link to="/tasks" {...user}>
-          all tasks
-        </Link>
-      </div>
+      <nav>
+        <div className="sign-out-button-2">
+          <Link to="/">Sign Out</Link>
+        </div>
+      </nav>
       <form onSubmit={handleSubmit}>
         <label>
           Title:
@@ -79,6 +79,11 @@ function AddTaskForm() {
         </label>
         <button type="submit">add task</button>
       </form>
+      <div className="all-tasks-2">
+        <Link to="/tasks" {...user}>
+          all tasks
+        </Link>
+      </div>
     </>
   );
 }
