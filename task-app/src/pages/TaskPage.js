@@ -26,7 +26,7 @@ function TaskPage() {
             .then((data) => setTasks(data));
         }
       });
-  }, [tasks]);
+  }, [tasks, user]);
 
   const handleDelete = (id) => {
     // const token = localStorage.getItem("token");
