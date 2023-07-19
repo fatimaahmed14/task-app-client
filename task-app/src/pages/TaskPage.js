@@ -16,6 +16,7 @@ function TaskPage() {
       .then((res) => res.json())
       .then((data) => {
         setUser(data);
+        console.log(user);
         if (data.id) {
           fetch(`${apiUrl}/tasks/${data.id}`, {
             method: "GET",
